@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+    /* start container media */
+   /* medium */
+@media(min-width:768px)
+{
+    .container{
+        width: 750px;
+    }
+}
+   /* large */
+@media(min-width:992px)
+{
+    .container{
+        width: 950px;
+    }
+}
+  /* x-large */
+@media(min-width:1200px)
+{
+    .container{
+        width: 1170px;
+    }
+}
+    /* end media container */
+
+/* start layout */
+.layout{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/one.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.container .content{
+    margin-left: 50px;
+}
+.container .content h1{
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+    margin-left: 20px;
+}
+.content p{
+    color: #ddd;
+    margin-top: 30px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-family: cursive;
+}
+.forming h2{
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: cursive;
+}
+.forming h2 span{
+    font-size: 17px;
+    color: #777;
+}
+.forming form{
+    background-color: #fcfcfc;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+.forming form input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+/* .forming form input[type='password']
+{
+    margin-top: 70.8px;
+} */
+.forming .first_error,
+.forming .last_error,
+.forming .email_error,
+.forming .password_error{
+    position: absolute;
+    background-color: #ce8f8fe0;
+    width: calc(100% - 30px);
+    padding: 15px;
+    color: #333;
+    font-size: 18px;
+    border-radius: 5px;
+    display: none;
+}
+.forming form .lname,
+.forming form .email,
+.forming form .pass,
+.forming form input[type="submit"]
+{
+    /* margin-top: 65.8px; */
+}
+.forming form input:focus{
+    outline:none;
+    border: 2px solid #333;
+}
+.forming form input::placeholder{
+    color: gray;
+    font-size: 15px
+}
+.forming form input[type='submit']
+{
+    background-color: #37b77f;
+    color: white;
+    font-size: 18px;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-top: 70.8px; */
+}
+.forming form span{
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    color: #ddd;
+    font-weight: bold;
+}
+.forming form span a{
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
+}
+/* end layout */
+@media(max-width:450px)
+{
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   .container .content{
+    margin-left: 10px;
+    text-align: center;
+   }
+   .container .content h1{
+    font-size: 15px;
+   }
+   .container .content p{
+    font-size: 14px;
+   }
+   .container .forming h2{
+    padding: 5px;
+    font-size: 15px;
+   }
+   .container .forming form{
+    padding: 10px;
+   }
+   .container .forming form input{
+    padding: 10px;
+   }
+}
+.forming .success{
+    padding: 15px;
+    background-color: #6ccb6c;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: none;
+}
